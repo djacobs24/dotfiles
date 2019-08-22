@@ -41,30 +41,7 @@ export PATH=$PATH:/opt/local/bin
 
 
 ##### ALIAS
-
-# Kubernetes
-alias kfwd="source ~/dotfiles/.functions; kfwd"
-alias kc="kubectl"
-alias kn="kubens"
-alias m="minikube"
-alias md="eval $(minikube docker-env)"
-alias kres="kubectl apply -f ./resources"
-alias k9="k9s"
-
-# Docker
-alias dc="docker-compose" 
-
-# Scala
-alias scalapb="sh $HOME/Downloads/scalapbc-0.8.2/bin/scalapbc"
-
-# Dirs
-alias cdtf="cd $GOPATH/src/github.com/TangramFlex/"
-alias cddj="cd $GOPATH/src/github.com/djacobs24/"
-alias cdcl="cd $GOPATH/src/github.com/TangramFlex/calypso"
-alias cddv="cd $GOPATH/src/github.com/TangramFlex/devops"
-
-# Basic Commands
-alias la="ls -la"
+source $HOME/dotfiles/.aliases
 
 
 ##### MISC
