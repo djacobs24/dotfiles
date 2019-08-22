@@ -19,25 +19,7 @@ export GPG_TTY=$(tty)
 
 
 ##### PATH
-
-# GoLang
-export PATH=$PATH:$GOPATH/bin
-
-# Protocol Buffers 
-export PATH=$PATH:$HOME/dev/protoc/bin
-
-# Visual Studio Code (code)
-export PATH=$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
-
-# RabbitMQ
-export PATH=$PATH:/usr/local/sbin/
-
-# Python
-export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
-
-# Flutter
-export PATH=$PATH:$HOME/dev/flutter/flutter/bin
-export PATH=$PATH:/opt/local/bin
+source $HOME/dotfiles/.path
 
 
 ##### ALIAS
