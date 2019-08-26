@@ -1,5 +1,22 @@
 #!/bin/bash
 
+function weather() {
+  # Current location
+  city=beavercreek
+  state=oh
+
+  if [ "$1" != "" ] && [ "$2" != "" ]; then
+    # Specified a city and state
+    open https://www.wunderground.com/hourly/us/$2/$1?cm_ven=localwx_hour
+  elif [ "$1" != "" ]; then
+    # Assume we want the current state
+    open https://www.wunderground.com/hourly/us/$state/$1?cm_ven=localwx_hour
+  else
+    # Assume we want the current city and state
+    open https://www.wunderground.com/hourly/us/$state/$city?cm_ven=localwx_hour
+  fi
+}
+
 # Kubectl port forwarding
 function kfwd() {
   if [ "$1" = "mongo" ]; then

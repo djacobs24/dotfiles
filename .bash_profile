@@ -1,35 +1,13 @@
-##### PROMPT
+#!/bin/bash
 
-# 04:30 PM /Users/david/go
-# >>>  
-# Start color: \e[0;3Xm
-# End color: \e[m
-# Time: \@
-# Full path: $(pwd)
-export PS1='\e[0;36m\@\e[m \e[0;32m$(pwd)\e[m\n>>>  '
+# Environment Variables
+source $HOME/dotfiles/.env_vars
 
-
-##### ENVIRONMENT VARIABLES
-
-# GoLang
-export GOPATH=$HOME/go
-
-# GPG
-export GPG_TTY=$(tty)
-
-
-##### PATH
-source $HOME/dotfiles/.path
-
-
-##### ALIAS
+# Aliases
 source $HOME/dotfiles/.aliases
 
+# Path
+source $HOME/dotfiles/.path
 
-##### MISC
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.bash.inc' ]; then source '$HOME/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.bash.inc' ]; then source '$HOME/google-cloud-sdk/completion.bash.inc'; fi
+# Prompt
+source $HOME/dotfiles/.bash_prompt

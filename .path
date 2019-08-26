@@ -1,23 +1,25 @@
+#!/bin/bash
+#!/bin/bash
+
 # GoLang
 export PATH=$PATH:$GOPATH/bin
-
 
 # Protocol Buffers 
 export PATH=$PATH:$HOME/dev/protoc/bin
 
-
 # Visual Studio Code (code)
 export PATH=$PATH:/Applications/VSCode.app/Contents/Resources/app/bin
-
 
 # RabbitMQ
 export PATH=$PATH:/usr/local/sbin/
 
-
 # Python
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
-
 
 # Flutter
 export PATH=$PATH:$HOME/dev/flutter/flutter/bin
 export PATH=$PATH:/opt/local/bin
+
+# Google Cloud
+if [ -f '/Users/david/google-cloud-sdk/path.bash.inc' ]; then source '/Users/david/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/david/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/david/google-cloud-sdk/completion.bash.inc'; fi
