@@ -57,3 +57,7 @@ function kfwd() {
     kubectl -n platform port-forward svc/service-hook 3001
   fi
 }
+
+function setupMinikube() {
+  cddv && pwd && m start && eval $(minikube docker-env) && kn && kn platform && kn && kres
+}

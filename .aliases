@@ -18,15 +18,13 @@ alias cddv="cd $GOPATH/src/github.com/TangramFlex/devops"
 alias gcal="open https://calendar.google.com"
 alias gmail="open https://mail.google.com"
 alias github="open https://github.com"
-alias weather="source ~/dotfiles/.functions; weather"
 
 # Kubernetes
-alias kfwd="source ~/dotfiles/.functions; kfwd"
 alias kc="kubectl"
 alias kn="kubens"
 alias m="minikube"
 alias md="eval $(minikube docker-env)"
-alias kres="kubectl apply -f ./resources"
+alias kapply="kubectl apply -f $GOPATH/src/github.com/TangramFlex/devops/resources"
 alias k9="k9s"
 
 # Docker

@@ -1,6 +1,6 @@
 # Dotfiles
 
-## aliases
+## .aliases
 
 ## .bash_profile
 
@@ -11,3 +11,11 @@
 ## .functions
 
 ## .path
+
+## git
+
+### .gitconfig
+
+### .gitignore
+
+### .gitmessage

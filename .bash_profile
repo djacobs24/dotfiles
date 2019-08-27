@@ -4,10 +4,13 @@
 source $HOME/dotfiles/.env_vars
 
 # Aliases
-source $HOME/dotfiles/.aliases
+source $DOTFILES/.aliases
+
+# Functions
+source $DOTFILES/.functions
 
 # Path
-source $HOME/dotfiles/.path
+source $DOTFILES/.path
 
 # Prompt
-source $HOME/dotfiles/.bash_prompt
+source $DOTFILES/.bash_prompt

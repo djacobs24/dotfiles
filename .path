@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 # GoLang
 export PATH=$PATH:$GOPATH/bin
