@@ -54,10 +54,11 @@ function kfwd() {
   elif [ "$1" = "side-effects" ]; then
     kubectl -n platform port-forward svc/service-side-effects 3001
   elif [ "$1" = "hook" ]; then
-    kubectl -n platform port-forward svc/service-hook 3001
+    kubectl -n platform port-forward svc/service-hook 3002
+
   fi
 }
 
 function setupMinikube() {
-  cddv && pwd && m start && eval $(minikube docker-env) && kn && kn platform && kn && kres
+  cddv && pwd && m start && eval $(minikube docker-env) && kn && kn platform && kn && kapply
 }
