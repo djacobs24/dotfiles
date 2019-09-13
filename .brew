@@ -1,0 +1,123 @@
+#!/bin/bash
+
+# Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Allow re-install of grep
+brew tap homebrew/dupes
+
+# Android Studio
+brew cask install android-studio
+
+# Base64
+brew install base64
+
+# Bat
+brew install bat
+
+# CCleaner
+brew cask install ccleaner
+
+# Dep
+brew install dep
+
+# Docker
+brew cask install docker
+
+# Github
+brew install hub
+
+# Go
+brew install go
+
+# Google Chrome
+brew cask install google-chrome
+
+# GoLand
+brew cask install goland
+
+# iTerm2
+brew cask install iterm2
+
+# Kubernetes
+brew install kubernetes-cli
+brew install kubectx
+brew cask install minikube
+brew install derailed/k9s/k9s
+
+# LastPass
+brew cask install lastpass
+
+# MD5 and SHA1
+brew install md5sha1sum
+
+# MinIO
+brew install minio
+brew install minio/stable/mc
+
+# MongoDB
+brew install mongodb
+
+# Muzzle
+brew cask install muzzle
+
+# Postico
+brew cask install postico
+
+# Postman
+brew cask install postman
+
+# Protocol Buffers
+brew install protobuf
+
+# RabbitMQ
+brew install rabbitmq
+
+# Redis
+brew install redis
+
+# Robo 3T
+brew cask install robomongo
+
+# SketchUp
+brew cask install sketchup
+
+# Slack
+brew cask install slack
+
+# Spotify
+brew cask install spotify
+
+# Tree
+brew install tree
+
+# Vim
+brew install mercurial
+sudo mkdir -p /opt/local/bin
+cd ~
+git clone git@github.com:vim/vim.git
+cd vim
+./configure --prefix=/opt/local
+make
+sudo make install
+echo 'PATH=/opt/local/bin:$PATH' >> ~/.bash_profile
+source ~/.bash_profile
+cd ~
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
+# VirtualBox
+brew cask install virtualbox
+
+# Visual Studio Code
+brew cask install visual-studio-code
+
+# Remove outdated versions from the cellar
+brew cleanup
