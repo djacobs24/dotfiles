@@ -1,21 +1,23 @@
 # Dotfiles
 
-## .aliases
+## [.aliases](./aliases)
 
-## .bash_profile
+## [.bash_profile](./bash_profile)
 
-## .bash_prompt
+## [.bash_prompt](./bash_prompt)
 
-## .env_vars
+## [.brew](./brew)
 
-## .functions
+## [.env_vars](./env_vars)
 
-## .path
+## [.functions](./functions)
 
-## git
+## [.path](./path)
 
-### .gitconfig
+## [git](./git)
 
-### .gitignore
+### [.gitconfig](./git/.gitconfig)
 
-### .gitmessage
+### [.gitignore](./git/.gitignore)
+
+### [.gitmessage](/git/.gitmessage)
