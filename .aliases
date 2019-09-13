@@ -9,10 +9,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Dirs
-alias cdtf="cd $GOPATH/src/github.com/TangramFlex/"
-alias cddj="cd $GOPATH/src/github.com/djacobs24/"
-alias cdcl="cd $GOPATH/src/github.com/TangramFlex/calypso"
-alias cddv="cd $GOPATH/src/github.com/TangramFlex/devops"
+alias cdtf="cd $REPOS/github.com/TangramFlex"
+alias cddj="cd $REPOS/github.com/djacobs24"
+alias cdcl="cd $REPOS/github.com/TangramFlex/calypso"
+alias cddv="cd $REPOS/github.com/TangramFlex/devops"
 
 # URLs
 alias gcal="open https://calendar.google.com"
