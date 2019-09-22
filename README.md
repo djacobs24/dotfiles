@@ -1,18 +1,18 @@
 # Dotfiles
 
-## [.aliases](./aliases)
+## [.aliases](./.aliases)
 
-## [.bash_profile](./bash_profile)
+## [.bash_profile](./.bash_profile)
 
-## [.bash_prompt](./bash_prompt)
+## [.bash_prompt](./.bash_prompt)
 
-## [.brew](./brew)
+## [.brew](./.brew)
 
-## [.env_vars](./env_vars)
+## [.env_vars](./.env_vars)
 
-## [.functions](./functions)
+## [.functions](./.functions)
 
-## [.path](./path)
+## [.path](./.path)
 
 ## [git](./git)
 
