@@ -67,6 +67,9 @@ brew install mongodb
 # Muzzle
 brew cask install muzzle
 
+# Nmap
+brew install nmap
+
 # Postico
 brew cask install postico
 
