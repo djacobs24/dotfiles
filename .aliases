@@ -27,7 +27,6 @@ alias m="minikube"
 alias md="eval $(minikube docker-env)"
 alias kapply="kubectl apply -f $REPOS/github.com/TangramFlex/devops/resources"
 alias k9="k9s"
-alias kdeljobs="kubectl delete jobs $(kubectl get jobs -o custom-columns=:.metadata.name)"
 
 # Docker
 alias dc="docker-compose" 
