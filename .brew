@@ -24,9 +24,6 @@ brew install bat
 # CCleaner
 brew cask install ccleaner
 
-# Dep
-brew install dep
-
 # Docker
 brew cask install docker
 
