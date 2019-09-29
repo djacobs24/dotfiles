@@ -18,7 +18,3 @@ export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
 # Flutter
 export PATH=$PATH:$HOME/dev/flutter/flutter/bin
 export PATH=$PATH:/opt/local/bin
-
-# Google Cloud
-if [ -f '/Users/david/google-cloud-sdk/path.bash.inc' ]; then source '/Users/david/google-cloud-sdk/path.bash.inc'; fi
-if [ -f '/Users/david/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/david/google-cloud-sdk/completion.bash.inc'; fi
