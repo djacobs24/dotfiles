@@ -1,23 +1,34 @@
 # Dotfiles
 
-## [.aliases](./.aliases)
+### [.aliases](./.aliases)
+- Shortcuts
 
-## [.bash_profile](./.bash_profile)
+### [.bash_profile](./.bash_profile)
+- Sourcing
 
-## [.bash_prompt](./.bash_prompt)
+### [.bash_prompt](./.bash_prompt)
+- Prompt styling
 
-## [.brew](./.brew)
+### [.brew](./.brew)
+- Mac software
 
-## [.env_vars](./.env_vars)
+### [.env_vars](./.env_vars)
+- Environment variables
 
-## [.functions](./.functions)
+### [.functions](./.functions)
+- Functions
 
-## [.path](./.path)
+### [.path](./.path)
+- Path
 
-## [git](./git)
+### [git](./git)
+- Git
 
-### [.gitconfig](./git/.gitconfig)
+#### [.gitconfig](./git/.gitconfig)
+- Git configuration
 
-### [.gitignore](./git/.gitignore)
+#### [.gitignore](./git/.gitignore)
+- Files ignored by git (globally)
 
-### [.gitmessage](/git/.gitmessage)
+#### [.gitmessage](/git/.gitmessage)
+- Helper for `git commit`
