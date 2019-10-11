@@ -64,6 +64,9 @@ brew install mongodb
 # Muzzle
 brew cask install muzzle
 
+# ngrok
+brew cask install ngrok
+
 # Nmap
 brew install nmap
 
@@ -118,6 +121,9 @@ brew cask install virtualbox
 
 # Visual Studio Code
 brew cask install visual-studio-code
+
+# Yarn
+brew install yarn
 
 # Remove outdated versions from the cellar
 brew cleanup
