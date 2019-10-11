@@ -14,6 +14,7 @@ alias cdtf="cd $REPOS/github.com/TangramFlex"
 alias cddj="cd $REPOS/github.com/djacobs24"
 alias cdcl="cd $REPOS/github.com/TangramFlex/calypso"
 alias cddv="cd $REPOS/github.com/TangramFlex/devops"
+alias cdfe="cd $REPOS/github.com/TangramFlex/frontend"
 
 # URLs
 alias gcal="open https://calendar.google.com"
