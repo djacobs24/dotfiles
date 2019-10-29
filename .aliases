@@ -2,6 +2,7 @@
 
 # Basic
 alias la="ls -la"
+alias c="clear"
 
 # Navigation
 alias ..="cd .."
@@ -11,10 +12,10 @@ alias ....="cd ../../.."
 # Dirs
 alias ~="cd ~"
 alias cdtf="cd $REPOS/github.com/TangramFlex"
-alias cddj="cd $REPOS/github.com/djacobs24"
 alias cdcl="cd $REPOS/github.com/TangramFlex/calypso"
 alias cddv="cd $REPOS/github.com/TangramFlex/devops"
 alias cdfe="cd $REPOS/github.com/TangramFlex/frontend"
+alias cddj="cd $REPOS/github.com/djacobs24"
 
 # URLs
 alias gcal="open https://calendar.google.com"
