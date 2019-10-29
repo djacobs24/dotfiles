@@ -23,9 +23,15 @@ function kfwd() {
     kubectl -n platform port-forward svc/service-api 8080
   elif [ "$1" = "hook" ]; then
     kubectl -n platform port-forward svc/service-hook 3002
+  elif [ "$1" = "sql" ]; then
+    kubectl -n platform port-forward svc/postgres-postgresql 5432
   fi
 }
 
 function setupMinikube() {
   cddv && pwd && minikube start && eval $(minikube docker-env) && kubens && kubens platform && kubens && kubectl apply -f $REPOS/github.com/TangramFlex/devops/resources
+}
+
+function aliases() {
+  grep alias ~/dotfiles/.aliases
 }
