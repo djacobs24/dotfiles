@@ -35,3 +35,8 @@ alias dc="docker-compose"
 
 # Scala
 alias scalapb="sh $HOME/Downloads/scalapbc-0.8.2/bin/scalapbc"
+
+# Applications
+alias goland='/usr/local/bin/goland'
+alias webstorm='/user/local/bin/webstorm'
+
