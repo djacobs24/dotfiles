@@ -59,7 +59,6 @@ function parse_git_branch() {
 function parse_git_dirty() {
 	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
 }
-# export PS1='\e[0;36m\@\e[m \e[0;32m$(pwd)\e[m $(parse_git_branch) \n>>>  '
 
 if [[ $(id -u) -eq 0 ]]; then
   export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\nλ \[$RESET\]"
