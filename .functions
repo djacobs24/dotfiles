@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# View the weather
 function weather() {
   if [ "$1" != "" ] && [ "$2" != "" ]; then
     LOC=$1+$2
@@ -28,10 +29,12 @@ function kfwd() {
   fi
 }
 
+# Start Minikube and setup the platform namespace
 function setupMinikube() {
   cddv && pwd && minikube start && eval $(minikube docker-env) && kubens && kubens platform && kubens && kubectl apply -f $REPOS/github.com/TangramFlex/devops/resources
 }
 
+# View my aliases
 function aliases() {
   grep alias ~/dotfiles/.aliases
 }
@@ -44,4 +47,9 @@ function dockerClean() {
   docker images -f dangling=true | grep 'none' | awk '{print $3}' | xargs docker rmi
   # Remove images that are super old, sometimes fails
   docker images | grep 'months' | awk '{print $3}' | xargs docker rmi
+}
+
+# Create a git message
+function commit() {
+  git commit -m "$1"
 }

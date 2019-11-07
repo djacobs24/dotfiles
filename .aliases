@@ -40,3 +40,7 @@ alias scalapb="sh $HOME/Downloads/scalapbc-0.8.2/bin/scalapbc"
 alias goland='/usr/local/bin/goland'
 alias webstorm='/user/local/bin/webstorm'
 
+# git
+alias status='git status'
+alias add='git add -A'
+alias push='git push'
