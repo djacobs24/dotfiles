@@ -42,5 +42,8 @@ alias webstorm='/user/local/bin/webstorm'
 
 # git
 alias status='git status'
-alias add='git add -A'
+alias add='git add'
 alias push='git push'
+alias pull='git pull'
+alias checkout='git checkout'
+alias rebase='git rebase'
