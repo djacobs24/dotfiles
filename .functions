@@ -49,7 +49,17 @@ function dockerClean() {
   docker images | grep 'months' | awk '{print $3}' | xargs docker rmi
 }
 
-# Create a git message
-function commit() {
-  git commit -m "$1"
+# Push new git branch
+function pushNew() {
+  git push -u origin $(parseGitBranch)
+}
+
+# Parses a git branch
+function parseGitBranch() {
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parseGitDirty)/"
+}
+
+# Parses a dirty git branch
+function parseGitDirty() {
+	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
 }

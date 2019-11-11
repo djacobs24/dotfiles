@@ -41,9 +41,10 @@ alias goland='/usr/local/bin/goland'
 alias webstorm='/user/local/bin/webstorm'
 
 # git
-alias status='git status'
 alias add='git add'
-alias push='git push'
-alias pull='git pull'
 alias checkout='git checkout'
+alias commit='git commit'
+alias pull='git pull'
+alias push='git push'
 alias rebase='git rebase'
+alias status='git status'

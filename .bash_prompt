@@ -52,16 +52,8 @@ export BOLD
 export BLINK
 export RESET
 
-function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
-}
-
-function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
-}
-
 if [[ $(id -u) -eq 0 ]]; then
-  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\nλ \[$RESET\]"
+  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parseGitBranch)\[$WHITE\]\nλ \[$RESET\]"
 else
-  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\nλ \[$RESET\]"
+  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parseGitBranch)\[$WHITE\]\nλ \[$RESET\]"
 fi
