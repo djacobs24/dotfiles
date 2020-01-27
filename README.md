@@ -1,12 +1,26 @@
 # Dotfiles
 
 ## Installation
-1. `cd ~/` 
-    - Go to your home directory
+
+### Mac
+1. `cd ~`
+    - Navigate to your home directory
 2. `git clone https://github.com/djacobs24/dotfiles.git` 
-    - Clone this repo to your home directory
-3. `ln -s .bash_profile dotfiles/.bash_profile` 
+    - Clone this repo
+3. `ln -s ~/dotfiles/.bash_profile .bash_profile` 
     - Create a symbolic link between your existing `~/.bash_profile` and the `~/dotfiles/.bash_profile` provided in the repository
+
+### Linux
+1. `cd ~`
+    - Navigate to your home directory
+2. `rm .bashrc`
+    - Remove the old `.bashrc` file
+2. `chsh`
+    - Make bash your default shell
+4. `git clone https://github.com/djacobs24/dotfiles.git` 
+    - Clone this repo
+5. `ln -s ~/dotfiles/.bash_profile .bashrc` 
+    - Create a symbolic link between your `~/.bashrc` and the `~/<REPOS>/dotfiles/.bash_profile` provided in the repository
 
 ## Dot Files
 
