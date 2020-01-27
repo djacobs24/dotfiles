@@ -10,7 +10,6 @@ function weather() {
     # Default city
     LOC=beavercreek
   fi
-
   curl -s http://wttr.in/$LOC
 }
 
