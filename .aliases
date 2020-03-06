@@ -26,8 +26,8 @@ alias github="open https://github.com"
 alias kc="kubectl"
 alias kn="kubens"
 alias m="minikube"
-alias md="eval $(minikube docker-env)"
-alias kapply="kubectl apply -f $REPOS/github.com/TangramFlex/devops/resources"
+alias mStart="minikube start && kubens platform && eval $(minikube docker-env)"
+alias mDock="eval $(minikube docker-env)"
 alias k9="k9s"
 
 # Docker
@@ -40,13 +40,16 @@ alias scalapb="sh $HOME/Downloads/scalapbc-0.8.2/bin/scalapbc"
 alias goland='/usr/local/bin/goland'
 alias webstorm='/usr/local/bin/webstorm'
 
-# git
+# Git
 alias add='git add'
 alias checkout='git checkout'
 alias commit='git commit'
 alias fetch='git fetch'
+alias log='git log --pretty=format:"%h - %an, %ar: %s" --graph'
 alias pull='git pull'
 alias push='git push'
+alias pushTag='git push origin $(git describe)'
 alias rebase='git rebase'
 alias stash='git stash'
-alias status='git status'
+alias status='git status -s'
+alias tag='git tag'
