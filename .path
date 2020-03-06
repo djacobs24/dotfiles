@@ -16,5 +16,8 @@ export PATH=$PATH:/usr/local/sbin/
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
 
 # Flutter
-export PATH=$PATH:$HOME/dev/flutter/flutter/bin
+export PATH=$PATH:$REPOS/github.com/other/flutter/flutter/bin
 export PATH=$PATH:/opt/local/bin
+
+# Android
+export PATH=$PATH:$HOME/Library/Android/sdk/tools
