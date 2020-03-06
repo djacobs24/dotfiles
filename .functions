@@ -28,9 +28,36 @@ function kfwd() {
   fi
 }
 
-# Start Minikube and setup the platform namespace
-function setupMinikube() {
-  cddv && pwd && minikube start && eval $(minikube docker-env) && kubens && kubens platform && kubens && kubectl apply -f $REPOS/github.com/TangramFlex/devops/resources
+function kapply() {
+  if [ "$1" = "api" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_api.yaml
+  elif [ "$1" = "auth" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_auth.yaml
+  elif [ "$1" = "component" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_component.yaml
+  elif [ "$1" = "email" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_email.yaml
+  elif [ "$1" = "hook" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_hook.yaml
+  elif [ "$1" = "integration" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_integration.yaml
+  elif [ "$1" = "invite" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_invite.yaml
+  elif [ "$1" = "logging" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_logging.yaml
+  elif [ "$1" = "org" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_org.yaml
+  elif [ "$1" = "plugin" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_plugin.yaml
+  elif [ "$1" = "side-effects" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_side_effects.yaml
+  elif [ "$1" = "user" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_user.yaml
+  elif [ "$1" = "workflow" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_workflow.yaml
+  elif [ "$1" = "workflow-aggregator" ]; then
+    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_workflow_aggregator.yaml
+  fi
 }
 
 # View my aliases
@@ -48,17 +75,32 @@ function dockerClean() {
   docker images | grep 'months' | awk '{print $3}' | xargs docker rmi
 }
 
-# Push new git branch
+# Push new Git branch
 function pushNew() {
   git push -u origin $(parseGitBranch)
 }
 
-# Parses a git branch
+# Parses a Git branch
 function parseGitBranch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parseGitDirty)/"
 }
 
-# Parses a dirty git branch
+# Parses a dirty Git branch
 function parseGitDirty() {
 	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
+}
+
+# Opens the iOS or Android emulator
+function emulate() {
+  if [ "$1" = "i" ]; then
+    open -a Simulator
+  elif [ "$1" = "a" ]; then
+    $HOME/Library/Android/sdk/emulator/emulator -avd Pixel_3_XL_-_Q
+  fi
+}
+
+# Updates Minikube
+function updateMinikube() {
+  sudo rm -rf /usr/local/bin/minikube
+  brew reinstall minikube
 }
