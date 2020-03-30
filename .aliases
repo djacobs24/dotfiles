@@ -31,25 +31,29 @@ alias mDock="eval $(minikube docker-env)"
 alias k9="k9s"
 
 # Docker
+alias dr="docker run"
+alias db="docker build"
 alias dc="docker-compose" 
 
 # Scala
 alias scalapb="sh $HOME/Downloads/scalapbc-0.8.2/bin/scalapbc"
 
 # Applications
-alias goland='/usr/local/bin/goland'
-alias webstorm='/usr/local/bin/webstorm'
+alias goland="/usr/local/bin/goland"
+alias webstorm="/usr/local/bin/webstorm"
 
 # Git
-alias add='git add'
-alias checkout='git checkout'
-alias commit='git commit'
-alias fetch='git fetch'
-alias log='git log --pretty=format:"%h - %an, %ar: %s" --graph'
-alias pull='git pull'
-alias push='git push'
-alias pushTag='git push origin $(git describe)'
-alias rebase='git rebase'
-alias stash='git stash'
-alias status='git status -s'
-alias tag='git tag'
+alias add="git add"
+alias branch="git fetch --all; git branch -vv"
+alias checkout="git checkout"
+alias commit="git commit"
+alias fetch="git fetch"
+alias log="git log --pretty=format:"%h - %an, %ar: %s" --graph"
+alias pull="git pull"
+alias push="git push"
+alias pushTag="git push origin $(git describe)"
+alias pushNew="git push -u origin $(parseGitBranch)"
+alias rebase="git rebase"
+alias stash="git stash"
+alias status="git status -s"
+alias tag="git tag"
