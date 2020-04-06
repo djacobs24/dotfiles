@@ -65,21 +65,6 @@ function aliases() {
   grep alias ~/dotfiles/.aliases
 }
 
-## Docker cleanup
-function dockerClean() {
-  # Remove exited containers
-  docker rm $(docker ps -a -f status=exited -q)
-  # Remove dangling images
-  docker images -f dangling=true | grep 'none' | awk '{print $3}' | xargs docker rmi
-  # Remove images that are super old, sometimes fails
-  docker images | grep 'months' | awk '{print $3}' | xargs docker rmi
-}
-
-# Push new Git branch
-function pushNew() {
-  git push -u origin $(parseGitBranch)
-}
-
 # Parses a Git branch
 function parseGitBranch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parseGitDirty)/"
