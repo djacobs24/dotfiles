@@ -1,59 +1,58 @@
 #!/bin/bash
 
 # Basic
-alias la="ls -la"
-alias c="clear"
+alias la='ls -la'
+alias c='clear'
 
 # Navigation
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # Dirs
-alias ~="cd ~"
-alias cdtf="cd $REPOS/github.com/TangramFlex"
-alias cdcl="cd $REPOS/github.com/TangramFlex/calypso"
-alias cddv="cd $REPOS/github.com/TangramFlex/devops"
-alias cdfe="cd $REPOS/github.com/TangramFlex/frontend"
-alias cddj="cd $REPOS/github.com/djacobs24"
+alias ~='cd ~'
+alias cdtf='cd $REPOS/github.com/TangramFlex'
+alias cdcl='cd $REPOS/github.com/TangramFlex/calypso'
+alias cddv='cd $REPOS/github.com/TangramFlex/devops'
+alias cdfe='cd $REPOS/github.com/TangramFlex/frontend'
+alias cddj='cd $REPOS/github.com/djacobs24'
 
 # URLs
-alias gcal="open https://calendar.google.com"
-alias gmail="open https://mail.google.com"
-alias github="open https://github.com"
+alias gcal='open https://calendar.google.com'
+alias gmail='open https://mail.google.com'
+alias github='open https://github.com'
 
 # Kubernetes
-alias kc="kubectl"
-alias kn="kubens"
-alias m="minikube"
-alias mStart="minikube start && kubens platform && eval $(minikube docker-env)"
-alias mDock="eval $(minikube docker-env)"
-alias k9="k9s"
+alias kc='kubectl'
+alias kn='kubens'
+alias m='minikube'
+alias mStart='minikube start && kubens platform && eval $(minikube docker-env)'
+alias md='eval $(minikube docker-env)'
+alias k='k9s'
 
 # Docker
-alias dr="docker run"
-alias db="docker build"
-alias dc="docker-compose" 
-
-# Scala
-alias scalapb="sh $HOME/Downloads/scalapbc-0.8.2/bin/scalapbc"
+alias d='docker'
+alias dr='docker run'
+alias db='docker build'
+alias dc='docker-compose'
+alias prune='docker system prune'
 
 # Applications
-alias goland="/usr/local/bin/goland"
-alias webstorm="/usr/local/bin/webstorm"
+alias goland='/usr/local/bin/goland'
+alias webstorm='/usr/local/bin/webstorm'
 
 # Git
-alias add="git add"
-alias branch="git fetch --all; git branch -vv"
-alias checkout="git checkout"
-alias commit="git commit"
-alias fetch="git fetch"
-alias log="git log --pretty=format:"%h - %an, %ar: %s" --graph"
-alias pull="git pull"
-alias push="git push"
-alias pushTag="git push origin $(git describe)"
-alias pushNew="git push -u origin $(parseGitBranch)"
-alias rebase="git rebase"
-alias stash="git stash"
-alias status="git status -s"
-alias tag="git tag"
+alias add='git add'
+alias branch='git fetch --all; git branch -vv'
+alias checkout='git checkout'
+alias commit='git commit'
+alias fetch='git fetch'
+alias log='git log --pretty=format:"%h - %an, %ar: %s" --graph'
+alias pull='git pull'
+alias push='git push'
+alias pushTag='git push origin $(git describe)'
+alias pushNew='git push -u origin $(parseGitBranch)'
+alias rebase='git rebase'
+alias stash='git stash'
+alias status='git status -s'
+alias tag='git tag'
