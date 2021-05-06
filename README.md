@@ -1,58 +1,57 @@
 # Dotfiles
 
-## Installation
+## Usage
 
 ### Mac
-1. `cd ~`
-    - Navigate to your home directory
-2. `git clone https://github.com/djacobs24/dotfiles.git` 
-    - Clone this repo
-3. `ln -s ~/dotfiles/.bash_profile .bash_profile` 
-    - Create a symbolic link between your existing `~/.bash_profile` and the `~/dotfiles/.bash_profile` provided in the repository
+1. Navigate to your home directory
+```
+cd
+```
+2. Clone this repo
+```
+git clone git@github.com:djacobs24/dotfiles.git
+```
+3. Create a symbolic link between your existing `.bash_profile` and the `dotfiles/.bash_profile` provided in this repository
+```
+ln -s dotfiles/.bash_profile .bash_profile
+```
 
 ### Linux
-1. `cd ~`
-    - Navigate to your home directory
-2. `rm .bashrc`
-    - Remove the old `.bashrc` file
-2. `chsh`
-    - Make bash your default shell
-4. `git clone https://github.com/djacobs24/dotfiles.git` 
-    - Clone this repo
-5. `ln -s ~/dotfiles/.bash_profile .bashrc` 
-    - Create a symbolic link between your `~/.bashrc` and the `~/<REPOS>/dotfiles/.bash_profile` provided in the repository
+1. Navigate to your home directory
+```
+cd
+```
+2. Remove the old `.bashrc` file
+```
+rm .bashrc
+```
+3. Make bash your default shell
+```
+chsh
+```
+4. Clone this repo
+```
+git clone git@github.com:djacobs24/dotfiles.git
+```
+5. Create a symbolic link between your `.bashrc` and the `dotfiles/.bash_profile` provided in this repository
+```
+ln -s dotfiles/.bash_profile .bashrc
+```
 
-## Dot Files
+## Repo Structure
 
-### [.aliases](./.aliases)
-- Shortcuts
+[**git**](./git) - Global git config
 
-### [.bash_profile](./.bash_profile)
-- Sourcing
+[**.aliases**](./.aliases) - Shortcuts
 
-### [.bash_prompt](./.bash_prompt)
-- Prompt styling
+[**.bash_profile**](./.bash_profile) - Sourcing
 
-### [.brew](./.brew)
-- Mac software
+[**.bash_prompt**](./.bash_prompt) - Prompt styling
 
-### [.env_vars](./.env_vars)
-- Environment variables
+[**.brew**](./.brew) - Installing with [Homebrew](https://brew.sh/)
 
-### [.functions](./.functions)
-- Functions
+[**.env_vars**](./.env_vars) - Environment variables
 
-### [.path](./.path)
-- Path
+[**.functions**](./.functions) - Bash functions
 
-### [git](./git)
-- Git
-
-#### [.gitconfig](./git/.gitconfig)
-- Git configuration
-
-#### [.gitignore](./git/.gitignore)
-- Files ignored by git (globally)
-
-#### [.gitmessage](/git/.gitmessage)
-- Helper for `git commit`
+[**.path**](./.path) - Path
