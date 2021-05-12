@@ -1,5 +1,5 @@
 # The commit title should be 50 characters or less
-# fix, feat, BREAKING CHANGE, chore, docs, style, refactor, perf, test
+# fix, feat, BREAKING CHANGE, chore, doc, style, refactor, perf, test
 
 
 # Why is this change necessary?

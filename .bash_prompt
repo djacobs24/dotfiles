@@ -53,7 +53,7 @@ export BLINK
 export RESET
 
 if [[ $(id -u) -eq 0 ]]; then
-  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parseGitBranch)\[$WHITE\]\nλ \[$RESET\]"
+  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$ORANGE\]\$(parseGitBranch)\[$WHITE\]\nλ \[$RESET\]"
 else
-  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parseGitBranch)\[$WHITE\]\nλ \[$RESET\]"
+  export PS1="\[$YELLOW\]\D{%r} \[$WHITE\]in \[$BLUE\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$ORANGE\]\$(parseGitBranch)\[$WHITE\]\nλ \[$RESET\]"
 fi

@@ -14,10 +14,17 @@ export PATH=$PATH:/usr/local/sbin/
 
 # Python
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
+export PATH=$PATH:/Users/david/Library/Python/2.7/bin
 
 # Flutter
-export PATH=$PATH:$REPOS/github.com/other/flutter/flutter/bin
+export PATH=$PATH:$REPOS/other/flutter/flutter/bin
 export PATH=$PATH:/opt/local/bin
 
 # Android
 export PATH=$PATH:$HOME/Library/Android/sdk/tools
+
+# Rust
+export PATH=$PATH:$HOME/.cargo/bin
+
+# MongoDB
+export PATH=$PATH:/usr/local/mongodb/bin

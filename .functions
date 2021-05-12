@@ -13,53 +13,6 @@ function weather() {
   curl -s http://wttr.in/$LOC
 }
 
-# Kubectl port forwarding
-function kfwd() {
-  if [ "$1" = "mongo" ]; then
-    kubectl -n platform port-forward svc/mongodb 27017
-  elif [ "$1" = "rabbit" ]; then
-    kubectl -n platform port-forward svc/rabbitmq 15672
-  elif [ "$1" = "api" ]; then
-    kubectl -n platform port-forward svc/service-api 8080
-  elif [ "$1" = "hook" ]; then
-    kubectl -n platform port-forward svc/service-hook 3002
-  elif [ "$1" = "sql" ]; then
-    kubectl -n platform port-forward svc/postgres-postgresql 5432
-  fi
-}
-
-function kapply() {
-  if [ "$1" = "api" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_api.yaml
-  elif [ "$1" = "auth" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_auth.yaml
-  elif [ "$1" = "component" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_component.yaml
-  elif [ "$1" = "email" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_email.yaml
-  elif [ "$1" = "hook" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_hook.yaml
-  elif [ "$1" = "integration" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_integration.yaml
-  elif [ "$1" = "invite" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_invite.yaml
-  elif [ "$1" = "logging" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_logging.yaml
-  elif [ "$1" = "org" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_org.yaml
-  elif [ "$1" = "plugin" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_plugin.yaml
-  elif [ "$1" = "side-effects" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_side_effects.yaml
-  elif [ "$1" = "user" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_user.yaml
-  elif [ "$1" = "workflow" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_workflow.yaml
-  elif [ "$1" = "workflow-aggregator" ]; then
-    kubectl apply -f $REPOS/github.com/TangramFlex/devops/base/resources/service_workflow_aggregator.yaml
-  fi
-}
-
 # View my aliases
 function aliases() {
   grep alias ~/dotfiles/.aliases
@@ -84,8 +37,3 @@ function emulate() {
   fi
 }
 
-# Updates Minikube
-function updateMinikube() {
-  sudo rm -rf /usr/local/bin/minikube
-  brew reinstall minikube
-}

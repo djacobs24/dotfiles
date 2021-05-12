@@ -3,6 +3,7 @@
 # Basic
 alias la='ls -la'
 alias c='clear'
+alias tr='tree'
 
 # Navigation
 alias ..='cd ..'
@@ -10,11 +11,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Dirs
-alias ~='cd ~'
-alias cdtf='cd $REPOS/github.com/TangramFlex'
-alias cdcl='cd $REPOS/github.com/TangramFlex/calypso'
-alias cddv='cd $REPOS/github.com/TangramFlex/devops'
-alias cdfe='cd $REPOS/github.com/TangramFlex/frontend'
 alias cddj='cd $REPOS/github.com/djacobs24'
 
 # URLs
@@ -22,24 +18,21 @@ alias gcal='open https://calendar.google.com'
 alias gmail='open https://mail.google.com'
 alias github='open https://github.com'
 
+# Go
+alias godeps='go list -m -mod=mod all'
+
 # Kubernetes
-alias kc='kubectl'
-alias kn='kubens'
-alias m='minikube'
-alias mStart='minikube start && kubens platform && eval $(minikube docker-env)'
-alias md='eval $(minikube docker-env)'
+alias kctl='kubectl'
+alias kctx='kubectx'
+alias kns='kubens'
 alias k='k9s'
 
 # Docker
 alias d='docker'
-alias dr='docker run'
-alias db='docker build'
-alias dc='docker-compose'
 alias prune='docker system prune'
 
 # Applications
 alias goland='/usr/local/bin/goland'
-alias webstorm='/usr/local/bin/webstorm'
 
 # Git
 alias add='git add'
