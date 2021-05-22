@@ -1,17 +1,13 @@
 [user]
 	name = David Jacobs
-	email = david.jacobs@tangramflex.com
-	signingkey = 3F3291E086A29EC6
+	email = dev.david.jacobs@gmail.com
 [core]
 	excludesfile = ~/dotfiles/git/.gitignore
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
 [commit]
-	gpgsign = true
 	template = ~/dotfiles/git/.gitmessage
-[gpg]
-	program = gpg2
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
