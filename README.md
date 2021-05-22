@@ -15,6 +15,14 @@ git clone git@github.com:djacobs24/dotfiles.git
 ```
 ln -s dotfiles/.bash_profile .bash_profile
 ```
+4. Link the `git/.gitconfig` file provided in this repo to the main `.gitconfig` file
+```
+git config include.path ~/dotfiles/git/.gitconfig
+```
+5. Set bash to default shell
+```
+chsh -s /bin/bash
+```
 
 ### Linux
 1. Navigate to your home directory
@@ -36,6 +44,14 @@ git clone git@github.com:djacobs24/dotfiles.git
 5. Create a symbolic link between your `.bashrc` and the `dotfiles/.bash_profile` provided in this repository
 ```
 ln -s dotfiles/.bash_profile .bashrc
+```
+6. Link the `git/.gitconfig` file provided in this repo to the main `.gitconfig` file
+```
+git config include.path ~/dotfiles/git/.gitconfig
+```
+7. Set bash to default shell
+```
+chsh -s /bin/bash
 ```
 
 ## Repo Structure
